@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Dropdown Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+        /* ========== Common CSS Part Start ========== */
+        a{
+            text-decoration: none;
+            display: inline-block;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        /* ========== Common CSS Part End ========== */
+        /* ========== Navbar CSS Part Start ========== */
+        nav{
+            width: 100%;
+            background: #FF6500;
+            padding: 0.625rem;
+        }
+        .menu ul{
+            display: flex;
+            gap: 3.125rem;
+            justify-content: center;
+        }
+        .menu li{
+            position: relative;
+        }
+        .menu li:hover ul{
+            visibility: visible;
+        }
+        .menu ul li a{
+            font-size: 1.875rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #fff;
+            transition: all linear .1s;
+        }
+        .menu ul li a:hover{
+            color: #FFF5CD;
+        }
+        .menu ul li a:hover ul{
+            display: block;
+        }
+        .menu ul li ul{
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #D95F59;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            transition: all linear .1s;
+        }
+        /* ========== Navbar CSS Part End ========== */
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="menu">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">service <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Web Maintenance</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
